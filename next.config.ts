@@ -19,15 +19,21 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 's3.us-west-2.amazonaws.com',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
       // Autoriser tous les domaines (pour développement)
       {
         protocol: 'https',
         hostname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
     ],
     dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 
