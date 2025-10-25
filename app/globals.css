@@ -1,17 +1,43 @@
 @import "tailwindcss";
 
+/* =========================
+   Variables de couleurs
+   ========================= */
 :root {
+  /* Palette Délice Mobile */
+  --vert-olive: #a9bf04;    /* rgb(169,191,4) */
+  --jaune-or: #f2c12e;      /* rgb(242,193,46) */
+  --orange: #f29727;        /* rgb(242,151,39) */
+  --rouille: #bf4904;       /* rgb(191,73,4) */
+  --rouge: #bf1304;         /* rgb(191,19,4) */
+
+  /* Couleurs système */
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* =========================
+   Configuration Tailwind
+   ========================= */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Couleurs Brand */
+  --color-brand-olive: #a9bf04;
+  --color-brand-gold: #f2c12e;
+  --color-brand-orange: #f29727;
+  --color-brand-rust: #bf4904;
+  --color-brand-red: #bf1304;
+
+  /* Polices */
+  --font-heading: var(--font-farro);
+  --font-body: var(--font-raleway);
 }
 
+/* =========================
+   Mode sombre (optionnel)
+   ========================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +45,28 @@
   }
 }
 
+/* =========================
+   Styles de base
+   ========================= */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar personnalisée (optionnel) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vert-olive);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rouille);
 }
