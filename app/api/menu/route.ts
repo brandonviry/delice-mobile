@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getMenuItemsFromNotion, getFeaturedItem } from "@/lib/notion-menu";
+import { getMenuItemsFromNotion, getFeaturedItem } from "../../../lib/notion-menu";
 
 export const dynamic = "force-dynamic"; // Désactiver le cache pour toujours avoir des données fraîches
 

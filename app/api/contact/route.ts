@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { addContactToNotion } from "@/lib/notion";
+import { addContactToNotion } from "../../../lib/notion";
 
 // Schéma de validation (même que dans le formulaire)
 const contactSchema = z.object({
