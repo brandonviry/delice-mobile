@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { createOrderInNotion } from "../../../lib/notion-orders";
+import { createOrderInNotion } from "../../lib/notion-orders";
 
 // Schéma de validation pour les commandes
 const orderItemSchema = z.object({
